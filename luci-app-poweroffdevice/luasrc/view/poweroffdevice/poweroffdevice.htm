@@ -12,9 +12,9 @@ h2 {
 
 </style>
 
-<h2 name="content"><%:Power Off Device%></h2>
-<p><%:Turn off the power to the device you are using%></p>
-<p class="alert-message warning"><%:WARNING: Power off might result in a reboot on a device which not support power off.%></p>
+<h2 name="content">设备关机</h2>
+<p>关闭您正在使用设备的电源</p>
+<p class="alert-message warning">警告：对于不支持关机的设备，关机可能会导致重新启动.</p>
 
 <script type="text/javascript">//<![CDATA[
 	var tries = 0;
@@ -26,7 +26,7 @@ h2 {
 		if (tries++ < 12)
 			window.setTimeout(ping, 5000);
 		else
-			alert("<%:Device unreachable%>");
+			alert("操作设备无效");
 	}
 
 	function ping() {
@@ -36,7 +36,7 @@ h2 {
 		img.onerror = check;
 		img.src = "<%=resource%>/icons/loading.gif?" + Math.random();
 
-		document.getElementById("pw-message").innerHTML ="<%:Device shutdown complete!%>";
+		document.getElementById("pw-message").innerHTML ="设备关机完毕!";
 	}
 
 	function pw(button) {
@@ -47,11 +47,11 @@ h2 {
 	}
 //]]></script>
 
-<input class="cbi-button cbi-button-apply" type="button" value="<%:Perform Power Off%>" onclick="pw(this)" />
+<input class="cbi-button cbi-button-apply" type="button" value="执行关机" onclick="pw(this)" />
 
 <p class="alert-message" style="display:none">
 	<img src="<%=resource%>/icons/loading.gif" alt="<%:Loading%>" style="vertical-align:middle" />
-	<span id="pw-message"><%:Shutting Down...%></span>
+	<span id="pw-message">正在关机...</span>
 </p>
 
 <%+footer%>
