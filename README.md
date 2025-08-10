@@ -52,6 +52,8 @@ Luci app parexp automatically obtains formatted partition expansion and automati
 
 ## interface
 
+![screenshots](./doc/poweroff.png)
+
 ![screenshots](./doc/poweroff1.png)
 
 ![screenshots](./doc/poweroff2.png)
